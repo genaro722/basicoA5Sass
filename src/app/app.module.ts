@@ -10,6 +10,8 @@ import { MenuComponent } from './shared/menu/menu.component';
 import { RouterConfig } from './/app-routing.module';
 import { RouterModule } from '@angular/router';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { NotificationComponent } from './shared/notification/notification.component';
+import { NotificationService } from './shared/notification/notification.service';
 
 
 @NgModule({
@@ -19,13 +21,14 @@ import { UsuarioComponent } from './usuario/usuario.component';
     LoginComponent,
     RegisterComponent,
     MenuComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(RouterConfig)
   ],
-  providers: [],
+  providers: [NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
